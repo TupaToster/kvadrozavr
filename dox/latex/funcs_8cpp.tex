@@ -1,0 +1,193 @@
+\hypertarget{funcs_8cpp}{}\doxysection{funcs.\+cpp File Reference}
+\label{funcs_8cpp}\index{funcs.cpp@{funcs.cpp}}
+
+
+Contains all functions\textquotesingle{} bodies.  
+
+
+{\ttfamily \#include \char`\"{}prototypes.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{funcs_8cpp_a3a859f9649d638039a163eba7f509a75}{comp\+\_\+doubles}} (const double a, const double b)
+\begin{DoxyCompactList}\small\item\em Compares two double variables. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8ef}{input\+\_\+type}} \mbox{\hyperlink{funcs_8cpp_a3e88b576f751e03472f69a04b496f083}{input}} (double $\ast$const a, double $\ast$const b, double $\ast$const c)
+\begin{DoxyCompactList}\small\item\em Takes input from user. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{funcs_8cpp_ae5dc8b6f2c6383dedf7f0d023bef55ae}{solve\+\_\+equation}} (const double a, const double b, const double c, double $\ast$const x1, double $\ast$const x2)
+\begin{DoxyCompactList}\small\item\em Chooses a method of solution. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{funcs_8cpp_a1a85d832273ba35c95cb23eec404cb55}{solve\+\_\+linear\+\_\+case}} (const double b, const double c, double $\ast$const x1)
+\begin{DoxyCompactList}\small\item\em Solves a linear equation. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{funcs_8cpp_ab3986d77f9343025a992c58e5487bf3a}{solve\+\_\+square\+\_\+case}} (const double a, const double b, const double c, double $\ast$const x1, double $\ast$const x2)
+\begin{DoxyCompactList}\small\item\em Solves a quadratic equation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcs_8cpp_a01849f8f242347588c3189ac31972a77}{output}} (enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} root\+\_\+am, double $\ast$const x1, double $\ast$const x2)
+\begin{DoxyCompactList}\small\item\em Creates output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcs_8cpp_a8e55f3e436b0268b26875038536f8e53}{unit\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em Tests correctness of work of key functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all functions\textquotesingle{} bodies. 
+
+A .cpp file that contains bodies of all functions declared in \char`\"{}prototypes.\+h\char`\"{} 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{funcs_8cpp_a3a859f9649d638039a163eba7f509a75}\label{funcs_8cpp_a3a859f9649d638039a163eba7f509a75}} 
+\index{funcs.cpp@{funcs.cpp}!comp\_doubles@{comp\_doubles}}
+\index{comp\_doubles@{comp\_doubles}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{comp\_doubles()}{comp\_doubles()}}
+{\footnotesize\ttfamily bool comp\+\_\+doubles (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two double variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b} & -\/ two numbers for comparison \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if $\vert$a -\/ b$\vert$ is less then EPS 
+
+false -\/ if $\vert$a -\/ b$\vert$ is more then EPS
+\end{DoxyReturn}
+This function is used to compare two double type variables with a precision of EPS 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{funcs_8cpp_a3e88b576f751e03472f69a04b496f083}\label{funcs_8cpp_a3e88b576f751e03472f69a04b496f083}} 
+\index{funcs.cpp@{funcs.cpp}!input@{input}}
+\index{input@{input}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8ef}{input\+\_\+type}} input (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Takes input from user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ pointers to variables that will contain coefficients of an equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an input\+\_\+type enumerator to show wether the user wishes to stop the program, or continue calculations
+\end{DoxyReturn}
+This function is used to take input of coefficients of an equation. 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{funcs_8cpp_a01849f8f242347588c3189ac31972a77}\label{funcs_8cpp_a01849f8f242347588c3189ac31972a77}} 
+\index{funcs.cpp@{funcs.cpp}!output@{output}}
+\index{output@{output}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily void output (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}}}]{root\+\_\+am,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Creates output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+am} & -\/ a roots\+\_\+amount that specifies an amount of roots \\
+\hline
+{\em x1,x2} & pointers to roots that have been found\\
+\hline
+\end{DoxyParams}
+This function is used to generate output based on amount of roots (specified by root\+\_\+am) and to print it 
+
+Definition at line 108 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{funcs_8cpp_ae5dc8b6f2c6383dedf7f0d023bef55ae}\label{funcs_8cpp_ae5dc8b6f2c6383dedf7f0d023bef55ae}} 
+\index{funcs.cpp@{funcs.cpp}!solve\_equation@{solve\_equation}}
+\index{solve\_equation@{solve\_equation}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_equation()}{solve\_equation()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Chooses a method of solution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ coefficients of a quadratic equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0 \\
+\hline
+{\em x1,x2} & -\/ pointers to variables that will contain found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found
+\end{DoxyReturn}
+This function is used to choose a calculation method depending on \char`\"{}a\char`\"{} parameter. If \char`\"{}a\char`\"{} is equal to 0 than equation is linear and solvelin function is used In other cases a solvesq function is used 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{funcs_8cpp_a1a85d832273ba35c95cb23eec404cb55}\label{funcs_8cpp_a1a85d832273ba35c95cb23eec404cb55}} 
+\index{funcs.cpp@{funcs.cpp}!solve\_linear\_case@{solve\_linear\_case}}
+\index{solve\_linear\_case@{solve\_linear\_case}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_linear\_case()}{solve\_linear\_case()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+linear\+\_\+case (\begin{DoxyParamCaption}\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1 }\end{DoxyParamCaption})}
+
+
+
+Solves a linear equation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b,c} & -\/ coefficients of a linear function of type\+: b $\ast$ x + c = 0 \\
+\hline
+{\em x1} & -\/ pointer to a variable that will contain a found root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found
+\end{DoxyReturn}
+This function is used to find all real roots of a linear equation and specify the amount of roots found 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{funcs_8cpp_ab3986d77f9343025a992c58e5487bf3a}\label{funcs_8cpp_ab3986d77f9343025a992c58e5487bf3a}} 
+\index{funcs.cpp@{funcs.cpp}!solve\_square\_case@{solve\_square\_case}}
+\index{solve\_square\_case@{solve\_square\_case}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_square\_case()}{solve\_square\_case()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+square\+\_\+case (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Solves a quadratic equation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ coefficients of a quadratic equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0 \\
+\hline
+{\em x1,x2} & -\/ pointers to variables that will contain found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em This} & function does not operate with \char`\"{}a\char`\"{} equal to zero \\
+\hline
+{\em (this} & issue is solved in solve\+\_\+equation function)\\
+\hline
+\end{DoxyExceptions}
+This function is used to find all real roots of a quadratic equation and specify the amount of roots found 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{funcs_8cpp_a8e55f3e436b0268b26875038536f8e53}\label{funcs_8cpp_a8e55f3e436b0268b26875038536f8e53}} 
+\index{funcs.cpp@{funcs.cpp}!unit\_test@{unit\_test}}
+\index{unit\_test@{unit\_test}!funcs.cpp@{funcs.cpp}}
+\doxysubsubsection{\texorpdfstring{unit\_test()}{unit\_test()}}
+{\footnotesize\ttfamily void unit\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tests correctness of work of key functions. 
+
+This function is used to detect mistakes in functions solve\+\_\+equation, solve\+\_\+linear\+\_\+case, solve\+\_\+square\+\_\+case and comp\+\_\+doubles 
+
+Definition at line 141 of file funcs.\+cpp.
+

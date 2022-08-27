@@ -1,0 +1,333 @@
+\hypertarget{prototypes_8h}{}\doxysection{prototypes.\+h File Reference}
+\label{prototypes_8h}\index{prototypes.h@{prototypes.h}}
+
+
+A header with all funcs prototypes and constants.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$TXlib.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{prototypes_8h_a6ebf6899d6c1c8b7b9d09be872c05aae}{EPS}}~1e-\/7
+\begin{DoxyCompactList}\small\item\em A constant that specifies what a really smol number is. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{prototypes_8h_aabf4f709c8199e41cf279c77112345fe}{MAX\+\_\+\+LEN}}~1000
+\begin{DoxyCompactList}\small\item\em A constant that specifies max length of an input string. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{prototypes_8h_a011ae48ddd36934a88e163cf739e1d7e}{ASRT}}(cnd)
+\begin{DoxyCompactList}\small\item\em Asserts the condition but does not abort whole program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \{ \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a5a79e9e49077da58fe5d46a98f0b5e36}{INF\+\_\+\+ROOTS}} = -\/1
+, \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a52da2ea29bc7f0697300ec26acb69715}{ZERO\+\_\+\+ROOTS}} = 0
+, \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a18b6191cfda49142b1bbf81f95110ee9}{ONE\+\_\+\+ROOTS}} = 1
+, \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a876622d3c0b008da13a3685c64714e81}{TWO\+\_\+\+ROOTS}} = 2
+ \}
+\item 
+enum \mbox{\hyperlink{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8ef}{input\+\_\+type}} \{ \mbox{\hyperlink{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8efa2bc49ec37d6a5715dd23e85f1ff5bb59}{OK}} = 1
+, \mbox{\hyperlink{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8efac3c43c4348330b031cdd2c6d2d661be7}{STOP\+\_\+\+COMMAND}} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Constants to specify type of input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{prototypes_8h_a02cbc2defee0f3d84ee8067d45732176}{comp\+\_\+doubles}} (double a, double b)
+\begin{DoxyCompactList}\small\item\em Compares two double variables. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{prototypes_8h_a98fed8725d0e188dde87f39168836ad2}{solve\+\_\+equation}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em Chooses a method of solution. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{prototypes_8h_a72c9b1fd8efbda71659c7e47ce992fe8}{solve\+\_\+square\+\_\+case}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em Solves a quadratic equation. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{prototypes_8h_aaea2d0f9b4155a87659c7a2fcc6f8ea7}{solve\+\_\+linear\+\_\+case}} (double b, double c, double $\ast$x1)
+\begin{DoxyCompactList}\small\item\em Solves a linear equation. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8ef}{input\+\_\+type}} \mbox{\hyperlink{prototypes_8h_a38b676cf5699bb213b0808b403c0f24c}{input}} (double $\ast$a, double $\ast$b, double $\ast$c)
+\begin{DoxyCompactList}\small\item\em Takes input from user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prototypes_8h_a7fb618b9f5ac5f07be66734e0a74bc31}{output}} (enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} root\+\_\+am, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em Creates output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{prototypes_8h_a8e55f3e436b0268b26875038536f8e53}{unit\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em Tests correctness of work of key functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A header with all funcs prototypes and constants. 
+
+This thing contains all functions\textquotesingle{} prototypes and constants needed for work of a program 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{prototypes_8h_a011ae48ddd36934a88e163cf739e1d7e}\label{prototypes_8h_a011ae48ddd36934a88e163cf739e1d7e}} 
+\index{prototypes.h@{prototypes.h}!ASRT@{ASRT}}
+\index{ASRT@{ASRT}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{ASRT}{ASRT}}
+{\footnotesize\ttfamily \#define ASRT(\begin{DoxyParamCaption}\item[{}]{cnd }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                    \textcolor{keywordflow}{if}(!(cnd)) printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}}                   \(\backslash\)}
+\DoxyCodeLine{                                    \textcolor{stringliteral}{"{}Assertion failed: \%s\(\backslash\)n"{}}\(\backslash\)}
+\DoxyCodeLine{                                    \textcolor{stringliteral}{"{}in file \%s\(\backslash\)n"{}}           \(\backslash\)}
+\DoxyCodeLine{                                    \textcolor{stringliteral}{"{}function \%s\(\backslash\)n"{}}          \(\backslash\)}
+\DoxyCodeLine{                                    \textcolor{stringliteral}{"{}line \%d\(\backslash\)n"{}},             \(\backslash\)}
+\DoxyCodeLine{                      \#cnd, \_\_FILE\_\_, \_\_PRETTY\_FUNCTION\_\_, \_\_LINE\_\_);}
+
+\end{DoxyCode}
+
+
+Asserts the condition but does not abort whole program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cnd} & -\/ an expression with a bool return type\\
+\hline
+\end{DoxyParams}
+This function is used to let user now if a bool type expression has a different value than expected 
+
+Definition at line 32 of file prototypes.\+h.
+
+\mbox{\Hypertarget{prototypes_8h_a6ebf6899d6c1c8b7b9d09be872c05aae}\label{prototypes_8h_a6ebf6899d6c1c8b7b9d09be872c05aae}} 
+\index{prototypes.h@{prototypes.h}!EPS@{EPS}}
+\index{EPS@{EPS}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{EPS}{EPS}}
+{\footnotesize\ttfamily \#define EPS~1e-\/7}
+
+
+
+A constant that specifies what a really smol number is. 
+
+
+
+Definition at line 16 of file prototypes.\+h.
+
+\mbox{\Hypertarget{prototypes_8h_aabf4f709c8199e41cf279c77112345fe}\label{prototypes_8h_aabf4f709c8199e41cf279c77112345fe}} 
+\index{prototypes.h@{prototypes.h}!MAX\_LEN@{MAX\_LEN}}
+\index{MAX\_LEN@{MAX\_LEN}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_LEN}{MAX\_LEN}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+LEN~1000}
+
+
+
+A constant that specifies max length of an input string. 
+
+
+
+Definition at line 22 of file prototypes.\+h.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8ef}\label{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8ef}} 
+\index{prototypes.h@{prototypes.h}!input\_type@{input\_type}}
+\index{input\_type@{input\_type}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{input\_type}{input\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8ef}{input\+\_\+type}}}
+
+
+
+Constants to specify type of input. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OK@{OK}!prototypes.h@{prototypes.h}}\index{prototypes.h@{prototypes.h}!OK@{OK}}}\mbox{\Hypertarget{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8efa2bc49ec37d6a5715dd23e85f1ff5bb59}\label{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8efa2bc49ec37d6a5715dd23e85f1ff5bb59}} 
+OK&Indicates that input format is ok. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STOP\_COMMAND@{STOP\_COMMAND}!prototypes.h@{prototypes.h}}\index{prototypes.h@{prototypes.h}!STOP\_COMMAND@{STOP\_COMMAND}}}\mbox{\Hypertarget{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8efac3c43c4348330b031cdd2c6d2d661be7}\label{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8efac3c43c4348330b031cdd2c6d2d661be7}} 
+STOP\+\_\+\+COMMAND&Indicates that user wishes to exit. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 62 of file prototypes.\+h.
+
+\mbox{\Hypertarget{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}\label{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}} 
+\index{prototypes.h@{prototypes.h}!roots\_amount@{roots\_amount}}
+\index{roots\_amount@{roots\_amount}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{roots\_amount}{roots\_amount}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INF\_ROOTS@{INF\_ROOTS}!prototypes.h@{prototypes.h}}\index{prototypes.h@{prototypes.h}!INF\_ROOTS@{INF\_ROOTS}}}\mbox{\Hypertarget{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a5a79e9e49077da58fe5d46a98f0b5e36}\label{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a5a79e9e49077da58fe5d46a98f0b5e36}} 
+INF\+\_\+\+ROOTS&Indicates that infinite roots exist. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZERO\_ROOTS@{ZERO\_ROOTS}!prototypes.h@{prototypes.h}}\index{prototypes.h@{prototypes.h}!ZERO\_ROOTS@{ZERO\_ROOTS}}}\mbox{\Hypertarget{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a52da2ea29bc7f0697300ec26acb69715}\label{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a52da2ea29bc7f0697300ec26acb69715}} 
+ZERO\+\_\+\+ROOTS&Indicates that zero roots exist. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE\_ROOTS@{ONE\_ROOTS}!prototypes.h@{prototypes.h}}\index{prototypes.h@{prototypes.h}!ONE\_ROOTS@{ONE\_ROOTS}}}\mbox{\Hypertarget{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a18b6191cfda49142b1bbf81f95110ee9}\label{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a18b6191cfda49142b1bbf81f95110ee9}} 
+ONE\+\_\+\+ROOTS&Indicates that one root exists. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_ROOTS@{TWO\_ROOTS}!prototypes.h@{prototypes.h}}\index{prototypes.h@{prototypes.h}!TWO\_ROOTS@{TWO\_ROOTS}}}\mbox{\Hypertarget{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a876622d3c0b008da13a3685c64714e81}\label{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955a876622d3c0b008da13a3685c64714e81}} 
+TWO\+\_\+\+ROOTS&Indicates that two roots exist. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 51 of file prototypes.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{prototypes_8h_a02cbc2defee0f3d84ee8067d45732176}\label{prototypes_8h_a02cbc2defee0f3d84ee8067d45732176}} 
+\index{prototypes.h@{prototypes.h}!comp\_doubles@{comp\_doubles}}
+\index{comp\_doubles@{comp\_doubles}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{comp\_doubles()}{comp\_doubles()}}
+{\footnotesize\ttfamily bool comp\+\_\+doubles (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two double variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b} & -\/ two numbers for comparison \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if $\vert$a -\/ b$\vert$ is less then EPS 
+
+false -\/ if $\vert$a -\/ b$\vert$ is more then EPS
+\end{DoxyReturn}
+This function is used to compare two double type variables with a precision of EPS 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{prototypes_8h_a38b676cf5699bb213b0808b403c0f24c}\label{prototypes_8h_a38b676cf5699bb213b0808b403c0f24c}} 
+\index{prototypes.h@{prototypes.h}!input@{input}}
+\index{input@{input}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a0ae208dfa21925e3cb4a7c4ea17ea8ef}{input\+\_\+type}} input (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Takes input from user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ pointers to variables that will contain coefficients of an equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns an input\+\_\+type enumerator to show wether the user wishes to stop the program, or continue calculations
+\end{DoxyReturn}
+This function is used to take input of coefficients of an equation. 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{prototypes_8h_a7fb618b9f5ac5f07be66734e0a74bc31}\label{prototypes_8h_a7fb618b9f5ac5f07be66734e0a74bc31}} 
+\index{prototypes.h@{prototypes.h}!output@{output}}
+\index{output@{output}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily void output (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}}}]{root\+\_\+am,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Creates output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+am} & -\/ a roots\+\_\+amount that specifies an amount of roots \\
+\hline
+{\em x1,x2} & pointers to roots that have been found\\
+\hline
+\end{DoxyParams}
+This function is used to generate output based on amount of roots (specified by root\+\_\+am) and to print it 
+
+Definition at line 108 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{prototypes_8h_a98fed8725d0e188dde87f39168836ad2}\label{prototypes_8h_a98fed8725d0e188dde87f39168836ad2}} 
+\index{prototypes.h@{prototypes.h}!solve\_equation@{solve\_equation}}
+\index{solve\_equation@{solve\_equation}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{solve\_equation()}{solve\_equation()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Chooses a method of solution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ coefficients of a quadratic equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0 \\
+\hline
+{\em x1,x2} & -\/ pointers to variables that will contain found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found
+\end{DoxyReturn}
+This function is used to choose a calculation method depending on \char`\"{}a\char`\"{} parameter. If \char`\"{}a\char`\"{} is equal to 0 than equation is linear and solvelin function is used In other cases a solvesq function is used 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{prototypes_8h_aaea2d0f9b4155a87659c7a2fcc6f8ea7}\label{prototypes_8h_aaea2d0f9b4155a87659c7a2fcc6f8ea7}} 
+\index{prototypes.h@{prototypes.h}!solve\_linear\_case@{solve\_linear\_case}}
+\index{solve\_linear\_case@{solve\_linear\_case}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{solve\_linear\_case()}{solve\_linear\_case()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+linear\+\_\+case (\begin{DoxyParamCaption}\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1 }\end{DoxyParamCaption})}
+
+
+
+Solves a linear equation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b,c} & -\/ coefficients of a linear function of type\+: b $\ast$ x + c = 0 \\
+\hline
+{\em x1} & -\/ pointer to a variable that will contain a found root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found
+\end{DoxyReturn}
+This function is used to find all real roots of a linear equation and specify the amount of roots found 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{prototypes_8h_a72c9b1fd8efbda71659c7e47ce992fe8}\label{prototypes_8h_a72c9b1fd8efbda71659c7e47ce992fe8}} 
+\index{prototypes.h@{prototypes.h}!solve\_square\_case@{solve\_square\_case}}
+\index{solve\_square\_case@{solve\_square\_case}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{solve\_square\_case()}{solve\_square\_case()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{prototypes_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+square\+\_\+case (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Solves a quadratic equation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ coefficients of a quadratic equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0 \\
+\hline
+{\em x1,x2} & -\/ pointers to variables that will contain found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em This} & function does not operate with \char`\"{}a\char`\"{} equal to zero \\
+\hline
+{\em (this} & issue is solved in solve\+\_\+equation function)\\
+\hline
+\end{DoxyExceptions}
+This function is used to find all real roots of a quadratic equation and specify the amount of roots found 
+
+Definition at line 10 of file funcs.\+cpp.
+
+\mbox{\Hypertarget{prototypes_8h_a8e55f3e436b0268b26875038536f8e53}\label{prototypes_8h_a8e55f3e436b0268b26875038536f8e53}} 
+\index{prototypes.h@{prototypes.h}!unit\_test@{unit\_test}}
+\index{unit\_test@{unit\_test}!prototypes.h@{prototypes.h}}
+\doxysubsubsection{\texorpdfstring{unit\_test()}{unit\_test()}}
+{\footnotesize\ttfamily void unit\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tests correctness of work of key functions. 
+
+This function is used to detect mistakes in functions solve\+\_\+equation, solve\+\_\+linear\+\_\+case, solve\+\_\+square\+\_\+case and comp\+\_\+doubles 
+
+Definition at line 141 of file funcs.\+cpp.
+

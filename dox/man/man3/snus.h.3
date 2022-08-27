@@ -1,0 +1,282 @@
+.TH "snus.h" 3 "Fri Aug 26 2022" "Version 1.22.8(133.7)" "S.A.W.P." \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+snus.h \- A header with all funcs prototypes and constants\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <TXlib\&.h>\fP
+.br
+\fC#include <windows\&.h>\fP
+.br
+\fC#include <math\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEPS\fP   1e\-7"
+.br
+.RI "A constant that specifies what a really smol number is\&. "
+.ti -1c
+.RI "#define \fBMAX_LEN\fP   1000"
+.br
+.RI "A constant that specifies max length of an input string\&. "
+.ti -1c
+.RI "#define \fBASRT\fP(cnd)"
+.br
+.RI "Asserts the condition but does not abort whole program\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBroots_amount\fP { \fBINF\fP = -1, \fBZERO\fP = 0, \fBONE\fP = 1, \fBTWO\fP = 2 }"
+.br
+.RI "Constants that specify amounts of roots\&. "
+.ti -1c
+.RI "enum \fBerr_input\fP { \fBOK\fP = 1, \fBSTDIN_EMPTY_ERROR\fP = 0 }"
+.br
+.RI "Constants to specify errors of input\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBcomp_doubles\fP (double a, double b)"
+.br
+.RI "Compares two double variables\&. "
+.ti -1c
+.RI "enum \fBroots_amount\fP \fBsolve_equation\fP (double a, double b, double c, double *x1, double *x2)"
+.br
+.RI "Chooses a method of solution\&. "
+.ti -1c
+.RI "enum \fBroots_amount\fP \fBsolve_square_case\fP (double a, double b, double c, double *x1, double *x2)"
+.br
+.RI "Solves a quadratic equation\&. "
+.ti -1c
+.RI "enum \fBroots_amount\fP \fBsolve_linear_case\fP (double b, double c, double *x1)"
+.br
+.RI "Solves a linear equation\&. "
+.ti -1c
+.RI "enum \fBerr_input\fP \fBinput\fP (double *a, double *b, double *c)"
+.br
+.RI "Takes input from user\&. "
+.ti -1c
+.RI "void \fBoutput\fP (enum \fBroots_amount\fP root_am, double *x1, double *x2)"
+.br
+.RI "Creates output\&. "
+.ti -1c
+.RI "void \fBunit_test\fP ()"
+.br
+.RI "Tests correctness of work of key functions\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A header with all funcs prototypes and constants\&. 
+
+This thing contains all functions' prototypes and constants needed for work of a program 
+.PP
+Definition in file \fBsnus\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ASRT(cnd)"
+\fBValue:\fP
+.PP
+.nf
+    if(!(cnd)) {                      \
+    txSetColor(TX_RED);                             \
+    printf("\n" "Assertion failed: %s \n"           \
+                "in file %s\n"                      \
+                "function %s\n"                     \
+                "line %d\n",                        \
+    #cnd, __FILE__, __PRETTY_FUNCTION__, __LINE__); \
+    txSetColor(TX_WHITE);                           \
+}
+.fi
+.PP
+Asserts the condition but does not abort whole program\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcnd\fP - an expression with a bool return type
+.RE
+.PP
+This fucntion is used to let user now if a bool type expression has a different value than expected 
+.PP
+Definition at line 32 of file snus\&.h\&.
+.SS "#define EPS   1e\-7"
+
+.PP
+A constant that specifies what a really smol number is\&. 
+.PP
+Definition at line 16 of file snus\&.h\&.
+.SS "#define MAX_LEN   1000"
+
+.PP
+A constant that specifies max length of an input string\&. 
+.PP
+Definition at line 22 of file snus\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBerr_input\fP"
+
+.PP
+Constants to specify errors of input\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOK \fP\fP
+.TP
+\fB\fISTDIN_EMPTY_ERROR \fP\fP
+.PP
+Definition at line 56 of file snus\&.h\&.
+.SS "enum \fBroots_amount\fP"
+
+.PP
+Constants that specify amounts of roots\&. This set of constants is used to tell the output function how many roots it has to print\&. Also used in solve_equation, solve_square_case and solve_linear_case as a return value with the same purposes\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIINF \fP\fP
+.TP
+\fB\fIZERO \fP\fP
+.TP
+\fB\fIONE \fP\fP
+.TP
+\fB\fITWO \fP\fP
+.PP
+Definition at line 50 of file snus\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "bool comp_doubles (double a, double b)"
+
+.PP
+Compares two double variables\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa,b\fP - two numbers for comparison 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+true - if |a - b| is less then EPS 
+.PP
+false - if |a - b| is more then EPS
+.RE
+.PP
+This function is used to compare two double type variables with a precision of EPS 
+.PP
+Definition at line 12 of file 4k_mg\&.cpp\&.
+.SS "enum \fBerr_input\fP input (double * a, double * b, double * c)"
+
+.PP
+Takes input from user\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa,b,c\fP - pointers to variables that will contain coefficients of\\ an equation of type: a * x^2 + b * x + c = 0
+.RE
+.PP
+This function is used to take input of coefficients of an equation\&. 
+.PP
+Definition at line 12 of file 4k_mg\&.cpp\&.
+.SS "void output (enum \fBroots_amount\fP root_am, double * x1, double * x2)"
+
+.PP
+Creates output\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIroot_am\fP - a roots_amount that specifies an amount of roots 
+.br
+\fIx1,x2\fP pointers to roots that have been found
+.RE
+.PP
+This function is used to generate output based on amount of roots (specified by root_am) and to print them 
+.PP
+Definition at line 90 of file 4k_mg\&.cpp\&.
+.SS "enum \fBroots_amount\fP solve_equation (double a, double b, double c, double * x1, double * x2)"
+
+.PP
+Chooses a method of solution\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa,b,c\fP - coefficients of a quadratic equation of type: a * x^2 + b * x + c = 0 
+.br
+\fIx1,x2\fP - pointers to variables that will contain found roots 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+roots_amount type constant that specifies amount of roots found
+.RE
+.PP
+This function is used to choose a calculation method depending on 'a' parameter\&. If 'a' is equal to 0 than equation is linear and solvelin function is used In other cases a solvesq function is used 
+.PP
+Definition at line 12 of file 4k_mg\&.cpp\&.
+.SS "enum \fBroots_amount\fP solve_linear_case (double b, double c, double * x1)"
+
+.PP
+Solves a linear equation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIb,c\fP - coefficients of a linear function of type: b * x + c = 0 
+.br
+\fIx1\fP - pointer to a variable that will contain a found root 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+roots_amount type constant that specifies amount of roots found
+.RE
+.PP
+This function is used to find all real roots of a linear equation and specify the amount of roots found 
+.PP
+Definition at line 12 of file 4k_mg\&.cpp\&.
+.SS "enum \fBroots_amount\fP solve_square_case (double a, double b, double c, double * x1, double * x2)"
+
+.PP
+Solves a quadratic equation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIa,b,c\fP - coefficients of a quadratic equation of type: a * x^2 + b * x + c = 0 
+.br
+\fIx1,x2\fP - pointers to variables that will contain found roots 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+roots_amount type constant that specifies amount of roots found 
+.RE
+.PP
+\fBExceptions\fP
+.RS 4
+\fIThis\fP function does not operate with 'a' equal to zero 
+.br
+\fI(this\fP issue is solved in solve_equation function)
+.RE
+.PP
+This function is used to find all real roots of a quadratic equation and specify the amount of roots found 
+.PP
+Definition at line 12 of file 4k_mg\&.cpp\&.
+.SS "void unit_test ()"
+
+.PP
+Tests correctness of work of key functions\&. This function is used to detect mistakes in functions solve_equation, solve_linear_case, solve_square_case and comp_doubles 
+.PP
+Definition at line 122 of file 4k_mg\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for S\&.A\&.W\&.P\&. from the source code\&.

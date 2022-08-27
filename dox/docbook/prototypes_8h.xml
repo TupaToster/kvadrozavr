@@ -1,0 +1,500 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_prototypes_8h" xml:lang="en-US">
+<title>prototypes.h File Reference</title>
+<indexterm><primary>prototypes.h</primary></indexterm>
+<para>
+
+<para>A header with all funcs prototypes and constants. </para>
+ 
+</para>
+<programlisting>#include &lt;stdio.h&gt;
+#include &lt;TXlib.h&gt;
+#include &lt;windows.h&gt;
+#include &lt;math.h&gt;
+</programlisting><simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_prototypes_8h_1a6ebf6899d6c1c8b7b9d09be872c05aae">EPS</link>   1e-7</para>
+
+<para>A constant that specifies what a really smol number is. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_prototypes_8h_1aabf4f709c8199e41cf279c77112345fe">MAX_LEN</link>   1000</para>
+
+<para>A constant that specifies max length of an input string. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_prototypes_8h_1a011ae48ddd36934a88e163cf739e1d7e">ASRT</link>(cnd)</para>
+
+<para>Asserts the condition but does not abort whole program. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> { <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955a5a79e9e49077da58fe5d46a98f0b5e36">INF_ROOTS</link> = -1
+, <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955a52da2ea29bc7f0697300ec26acb69715">ZERO_ROOTS</link> = 0
+, <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955a18b6191cfda49142b1bbf81f95110ee9">ONE_ROOTS</link> = 1
+, <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955a876622d3c0b008da13a3685c64714e81">TWO_ROOTS</link> = 2
+ }</para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8ef">input_type</link> { <link linkend="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8efa2bc49ec37d6a5715dd23e85f1ff5bb59">OK</link> = 1
+, <link linkend="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8efac3c43c4348330b031cdd2c6d2d661be7">STOP_COMMAND</link> = 0
+ }</para>
+
+<para>Constants to specify type of input. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_prototypes_8h_1a02cbc2defee0f3d84ee8067d45732176">comp_doubles</link> (double a, double b)</para>
+
+<para>Compares two double variables. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> <link linkend="_prototypes_8h_1a98fed8725d0e188dde87f39168836ad2">solve_equation</link> (double a, double b, double c, double *x1, double *x2)</para>
+
+<para>Chooses a method of solution. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> <link linkend="_prototypes_8h_1a72c9b1fd8efbda71659c7e47ce992fe8">solve_square_case</link> (double a, double b, double c, double *x1, double *x2)</para>
+
+<para>Solves a quadratic equation. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> <link linkend="_prototypes_8h_1aaea2d0f9b4155a87659c7a2fcc6f8ea7">solve_linear_case</link> (double b, double c, double *x1)</para>
+
+<para>Solves a linear equation. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8ef">input_type</link> <link linkend="_prototypes_8h_1a38b676cf5699bb213b0808b403c0f24c">input</link> (double *a, double *b, double *c)</para>
+
+<para>Takes input from user. </para>
+</listitem>
+            <listitem><para>void <link linkend="_prototypes_8h_1a7fb618b9f5ac5f07be66734e0a74bc31">output</link> (enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> root_am, double *x1, double *x2)</para>
+
+<para>Creates output. </para>
+</listitem>
+            <listitem><para>void <link linkend="_prototypes_8h_1a8e55f3e436b0268b26875038536f8e53">unit_test</link> ()</para>
+
+<para>Tests correctness of work of key functions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>A header with all funcs prototypes and constants. </para>
+
+<para>This thing contains all functions&apos; prototypes and constants needed for work of a program </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_prototypes_8h_1a011ae48ddd36934a88e163cf739e1d7e"/>    <section>
+    <title>ASRT</title>
+<indexterm><primary>ASRT</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>ASRT</secondary></indexterm>
+<para><computeroutput>#define ASRT( cnd)</computeroutput></para><emphasis role="strong">Value:</emphasis><programlisting>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!(cnd))&#32;printf(<emphasis role="stringliteral">&quot;\n&quot;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Assertion&#32;failed:&#32;%s\n&quot;</emphasis>\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;in&#32;file&#32;%s\n&quot;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;function&#32;%s\n&quot;</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;line&#32;%d\n&quot;</emphasis>,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;\
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#cnd,&#32;__FILE__,&#32;__PRETTY_FUNCTION__,&#32;__LINE__);
+</programlisting><para>
+
+<para>Asserts the condition but does not abort whole program. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>cnd</entry>
+                                <entry>
+<para>- an expression with a bool return type</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                This function is used to let user now if a bool type expression has a different value than expected </para>
+<para>
+Definition at line 32 of file prototypes.h.</para>
+    </section><anchor xml:id="_prototypes_8h_1a6ebf6899d6c1c8b7b9d09be872c05aae"/>    <section>
+    <title>EPS</title>
+<indexterm><primary>EPS</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>EPS</secondary></indexterm>
+<para><computeroutput>#define EPS   1e-7</computeroutput></para><para>
+
+<para>A constant that specifies what a really smol number is. </para>
+</para>
+<para>
+Definition at line 16 of file prototypes.h.</para>
+    </section><anchor xml:id="_prototypes_8h_1aabf4f709c8199e41cf279c77112345fe"/>    <section>
+    <title>MAX_LEN</title>
+<indexterm><primary>MAX_LEN</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>MAX_LEN</secondary></indexterm>
+<para><computeroutput>#define MAX_LEN   1000</computeroutput></para><para>
+
+<para>A constant that specifies max length of an input string. </para>
+</para>
+<para>
+Definition at line 22 of file prototypes.h.</para>
+</section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8ef"/>    <section>
+    <title>input_type</title>
+<indexterm><primary>input_type</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>input_type</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8ef">input_type</link></computeroutput></para><para>
+
+<para>Constants to specify type of input. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>OK</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>OK</secondary></indexterm>
+<anchor xml:id="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8efa2bc49ec37d6a5715dd23e85f1ff5bb59"/>OK</entry><entry>
+<para>Indicates that input format is ok. </para>
+</entry></row><row><entry><indexterm><primary>STOP_COMMAND</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>STOP_COMMAND</secondary></indexterm>
+<anchor xml:id="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8efac3c43c4348330b031cdd2c6d2d661be7"/>STOP_COMMAND</entry><entry>
+<para>Indicates that user wishes to exit. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 62 of file prototypes.h.</para>
+    </section><anchor xml:id="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955"/>    <section>
+    <title>roots_amount</title>
+<indexterm><primary>roots_amount</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>roots_amount</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>INF_ROOTS</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>INF_ROOTS</secondary></indexterm>
+<anchor xml:id="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955a5a79e9e49077da58fe5d46a98f0b5e36"/>INF_ROOTS</entry><entry>
+<para>Indicates that infinite roots exist. </para>
+</entry></row><row><entry><indexterm><primary>ZERO_ROOTS</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>ZERO_ROOTS</secondary></indexterm>
+<anchor xml:id="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955a52da2ea29bc7f0697300ec26acb69715"/>ZERO_ROOTS</entry><entry>
+<para>Indicates that zero roots exist. </para>
+</entry></row><row><entry><indexterm><primary>ONE_ROOTS</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>ONE_ROOTS</secondary></indexterm>
+<anchor xml:id="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955a18b6191cfda49142b1bbf81f95110ee9"/>ONE_ROOTS</entry><entry>
+<para>Indicates that one root exists. </para>
+</entry></row><row><entry><indexterm><primary>TWO_ROOTS</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>TWO_ROOTS</secondary></indexterm>
+<anchor xml:id="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955a876622d3c0b008da13a3685c64714e81"/>TWO_ROOTS</entry><entry>
+<para>Indicates that two roots exist. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line 51 of file prototypes.h.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_prototypes_8h_1a02cbc2defee0f3d84ee8067d45732176"/>    <section>
+    <title>comp_doubles()</title>
+<indexterm><primary>comp_doubles</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>comp_doubles</secondary></indexterm>
+<para><computeroutput>bool comp_doubles (double a, double b)</computeroutput></para><para>
+
+<para>Compares two double variables. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>a, b</entry>
+                                <entry>
+<para>- two numbers for comparison </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - if |a - b| is less then EPS </para>
+
+<para>false - if |a - b| is more then EPS</para>
+</formalpara>
+This function is used to compare two double type variables with a precision of EPS </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_prototypes_8h_1a38b676cf5699bb213b0808b403c0f24c"/>    <section>
+    <title>input()</title>
+<indexterm><primary>input</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>input</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8ef">input_type</link> input (double * a, double * b, double * c)</computeroutput></para><para>
+
+<para>Takes input from user. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>a, b, c</entry>
+                                <entry>
+<para>- pointers to variables that will contain coefficients of an equation of type: a * x^2 + b * x + c = 0 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns an input_type enumerator to show wether the user wishes to stop the program, or continue calculations</para>
+</formalpara>
+This function is used to take input of coefficients of an equation. </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_prototypes_8h_1a7fb618b9f5ac5f07be66734e0a74bc31"/>    <section>
+    <title>output()</title>
+<indexterm><primary>output</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>output</secondary></indexterm>
+<para><computeroutput>void output (enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> root_am, double * x1, double * x2)</computeroutput></para><para>
+
+<para>Creates output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>root_am</entry>
+                                <entry>
+<para>- a roots_amount that specifies an amount of roots </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>x1, x2</entry>
+                                <entry>
+<para>pointers to roots that have been found</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                This function is used to generate output based on amount of roots (specified by root_am) and to print it </para>
+<para>
+Definition at line 108 of file funcs.cpp.</para>
+    </section><anchor xml:id="_prototypes_8h_1a98fed8725d0e188dde87f39168836ad2"/>    <section>
+    <title>solve_equation()</title>
+<indexterm><primary>solve_equation</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>solve_equation</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> solve_equation (double a, double b, double c, double * x1, double * x2)</computeroutput></para><para>
+
+<para>Chooses a method of solution. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>a, b, c</entry>
+                                <entry>
+<para>- coefficients of a quadratic equation of type: a * x^2 + b * x + c = 0 </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>x1, x2</entry>
+                                <entry>
+<para>- pointers to variables that will contain found roots </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>roots_amount type constant that specifies amount of roots found</para>
+</formalpara>
+This function is used to choose a calculation method depending on &quot;a&quot; parameter. If &quot;a&quot; is equal to 0 than equation is linear and solvelin function is used In other cases a solvesq function is used </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_prototypes_8h_1aaea2d0f9b4155a87659c7a2fcc6f8ea7"/>    <section>
+    <title>solve_linear_case()</title>
+<indexterm><primary>solve_linear_case</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>solve_linear_case</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> solve_linear_case (double b, double c, double * x1)</computeroutput></para><para>
+
+<para>Solves a linear equation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>b, c</entry>
+                                <entry>
+<para>- coefficients of a linear function of type: b * x + c = 0 </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>x1</entry>
+                                <entry>
+<para>- pointer to a variable that will contain a found root </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>roots_amount type constant that specifies amount of roots found</para>
+</formalpara>
+This function is used to find all real roots of a linear equation and specify the amount of roots found </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_prototypes_8h_1a72c9b1fd8efbda71659c7e47ce992fe8"/>    <section>
+    <title>solve_square_case()</title>
+<indexterm><primary>solve_square_case</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>solve_square_case</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> solve_square_case (double a, double b, double c, double * x1, double * x2)</computeroutput></para><para>
+
+<para>Solves a quadratic equation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>a, b, c</entry>
+                                <entry>
+<para>- coefficients of a quadratic equation of type: a * x^2 + b * x + c = 0 </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>x1, x2</entry>
+                                <entry>
+<para>- pointers to variables that will contain found roots </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>roots_amount type constant that specifies amount of roots found </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>This</entry>
+                                <entry>
+<para>function does not operate with &quot;a&quot; equal to zero </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>(this</entry>
+                                <entry>
+<para>issue is solved in solve_equation function)</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                This function is used to find all real roots of a quadratic equation and specify the amount of roots found </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_prototypes_8h_1a8e55f3e436b0268b26875038536f8e53"/>    <section>
+    <title>unit_test()</title>
+<indexterm><primary>unit_test</primary><secondary>prototypes.h</secondary></indexterm>
+<indexterm><primary>prototypes.h</primary><secondary>unit_test</secondary></indexterm>
+<para><computeroutput>void unit_test ( )</computeroutput></para><para>
+
+<para>Tests correctness of work of key functions. </para>
+</para>
+
+<para>This function is used to detect mistakes in functions solve_equation, solve_linear_case, solve_square_case and comp_doubles </para>
+<para>
+Definition at line 141 of file funcs.cpp.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_funcs_8cpp" xml:lang="en-US">
+<title>funcs.cpp File Reference</title>
+<indexterm><primary>funcs.cpp</primary></indexterm>
+<para>
+
+<para>Contains all functions&apos; bodies. </para>
+ 
+</para>
+<programlisting>#include &quot;prototypes.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_funcs_8cpp_1a3a859f9649d638039a163eba7f509a75">comp_doubles</link> (const double a, const double b)</para>
+
+<para>Compares two double variables. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8ef">input_type</link> <link linkend="_funcs_8cpp_1a3e88b576f751e03472f69a04b496f083">input</link> (double *const a, double *const b, double *const c)</para>
+
+<para>Takes input from user. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> <link linkend="_funcs_8cpp_1ae5dc8b6f2c6383dedf7f0d023bef55ae">solve_equation</link> (const double a, const double b, const double c, double *const x1, double *const x2)</para>
+
+<para>Chooses a method of solution. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> <link linkend="_funcs_8cpp_1a1a85d832273ba35c95cb23eec404cb55">solve_linear_case</link> (const double b, const double c, double *const x1)</para>
+
+<para>Solves a linear equation. </para>
+</listitem>
+            <listitem><para>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> <link linkend="_funcs_8cpp_1ab3986d77f9343025a992c58e5487bf3a">solve_square_case</link> (const double a, const double b, const double c, double *const x1, double *const x2)</para>
+
+<para>Solves a quadratic equation. </para>
+</listitem>
+            <listitem><para>void <link linkend="_funcs_8cpp_1a01849f8f242347588c3189ac31972a77">output</link> (enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> root_am, double *const x1, double *const x2)</para>
+
+<para>Creates output. </para>
+</listitem>
+            <listitem><para>void <link linkend="_funcs_8cpp_1a8e55f3e436b0268b26875038536f8e53">unit_test</link> ()</para>
+
+<para>Tests correctness of work of key functions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Contains all functions&apos; bodies. </para>
+
+<para>A .cpp file that contains bodies of all functions declared in &quot;prototypes.h&quot; </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_funcs_8cpp_1a3a859f9649d638039a163eba7f509a75"/>    <section>
+    <title>comp_doubles()</title>
+<indexterm><primary>comp_doubles</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>comp_doubles</secondary></indexterm>
+<para><computeroutput>bool comp_doubles (double a, double b)</computeroutput></para><para>
+
+<para>Compares two double variables. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>a, b</entry>
+                                <entry>
+<para>- two numbers for comparison </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>true - if |a - b| is less then EPS </para>
+
+<para>false - if |a - b| is more then EPS</para>
+</formalpara>
+This function is used to compare two double type variables with a precision of EPS </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_funcs_8cpp_1a3e88b576f751e03472f69a04b496f083"/>    <section>
+    <title>input()</title>
+<indexterm><primary>input</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>input</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a0ae208dfa21925e3cb4a7c4ea17ea8ef">input_type</link> input (double * a, double * b, double * c)</computeroutput></para><para>
+
+<para>Takes input from user. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>a, b, c</entry>
+                                <entry>
+<para>- pointers to variables that will contain coefficients of an equation of type: a * x^2 + b * x + c = 0 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Returns an input_type enumerator to show wether the user wishes to stop the program, or continue calculations</para>
+</formalpara>
+This function is used to take input of coefficients of an equation. </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_funcs_8cpp_1a01849f8f242347588c3189ac31972a77"/>    <section>
+    <title>output()</title>
+<indexterm><primary>output</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>output</secondary></indexterm>
+<para><computeroutput>void output (enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> root_am, double * x1, double * x2)</computeroutput></para><para>
+
+<para>Creates output. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>root_am</entry>
+                                <entry>
+<para>- a roots_amount that specifies an amount of roots </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>x1, x2</entry>
+                                <entry>
+<para>pointers to roots that have been found</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                This function is used to generate output based on amount of roots (specified by root_am) and to print it </para>
+<para>
+Definition at line 108 of file funcs.cpp.</para>
+    </section><anchor xml:id="_funcs_8cpp_1ae5dc8b6f2c6383dedf7f0d023bef55ae"/>    <section>
+    <title>solve_equation()</title>
+<indexterm><primary>solve_equation</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>solve_equation</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> solve_equation (double a, double b, double c, double * x1, double * x2)</computeroutput></para><para>
+
+<para>Chooses a method of solution. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>a, b, c</entry>
+                                <entry>
+<para>- coefficients of a quadratic equation of type: a * x^2 + b * x + c = 0 </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>x1, x2</entry>
+                                <entry>
+<para>- pointers to variables that will contain found roots </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>roots_amount type constant that specifies amount of roots found</para>
+</formalpara>
+This function is used to choose a calculation method depending on &quot;a&quot; parameter. If &quot;a&quot; is equal to 0 than equation is linear and solvelin function is used In other cases a solvesq function is used </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_funcs_8cpp_1a1a85d832273ba35c95cb23eec404cb55"/>    <section>
+    <title>solve_linear_case()</title>
+<indexterm><primary>solve_linear_case</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>solve_linear_case</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> solve_linear_case (double b, double c, double * x1)</computeroutput></para><para>
+
+<para>Solves a linear equation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>b, c</entry>
+                                <entry>
+<para>- coefficients of a linear function of type: b * x + c = 0 </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>x1</entry>
+                                <entry>
+<para>- pointer to a variable that will contain a found root </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>roots_amount type constant that specifies amount of roots found</para>
+</formalpara>
+This function is used to find all real roots of a linear equation and specify the amount of roots found </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_funcs_8cpp_1ab3986d77f9343025a992c58e5487bf3a"/>    <section>
+    <title>solve_square_case()</title>
+<indexterm><primary>solve_square_case</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>solve_square_case</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_prototypes_8h_1a46d3fddc9acc9207ec5f4dd340f5b955">roots_amount</link> solve_square_case (double a, double b, double c, double * x1, double * x2)</computeroutput></para><para>
+
+<para>Solves a quadratic equation. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>a, b, c</entry>
+                                <entry>
+<para>- coefficients of a quadratic equation of type: a * x^2 + b * x + c = 0 </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>x1, x2</entry>
+                                <entry>
+<para>- pointers to variables that will contain found roots </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>roots_amount type constant that specifies amount of roots found </para>
+</formalpara>
+
+                <formalpara>
+                    <title>
+Exceptions                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>This</entry>
+                                <entry>
+<para>function does not operate with &quot;a&quot; equal to zero </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>(this</entry>
+                                <entry>
+<para>issue is solved in solve_equation function)</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                This function is used to find all real roots of a quadratic equation and specify the amount of roots found </para>
+<para>
+Definition at line 10 of file funcs.cpp.</para>
+    </section><anchor xml:id="_funcs_8cpp_1a8e55f3e436b0268b26875038536f8e53"/>    <section>
+    <title>unit_test()</title>
+<indexterm><primary>unit_test</primary><secondary>funcs.cpp</secondary></indexterm>
+<indexterm><primary>funcs.cpp</primary><secondary>unit_test</secondary></indexterm>
+<para><computeroutput>void unit_test ( )</computeroutput></para><para>
+
+<para>Tests correctness of work of key functions. </para>
+</para>
+
+<para>This function is used to detect mistakes in functions solve_equation, solve_linear_case, solve_square_case and comp_doubles </para>
+<para>
+Definition at line 141 of file funcs.cpp.</para>
+</section>
+</section>
+</section>

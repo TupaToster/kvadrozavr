@@ -1,0 +1,190 @@
+\hypertarget{4k__mg_8cpp}{}\doxysection{4k\+\_\+mg.\+cpp File Reference}
+\label{4k__mg_8cpp}\index{4k\_mg.cpp@{4k\_mg.cpp}}
+
+
+Contains all functions\textquotesingle{} bodies.  
+
+
+{\ttfamily \#include \char`\"{}snus.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{4k__mg_8cpp_a02cbc2defee0f3d84ee8067d45732176}{comp\+\_\+doubles}} (double a, double b)
+\begin{DoxyCompactList}\small\item\em Compares two double variables. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{snus_8h_ae6e91702a8449c6fd46015ad5f51d845}{err\+\_\+input}} \mbox{\hyperlink{4k__mg_8cpp_a13d2c2714fbba2c6e3ed23f468305658}{input}} (double $\ast$a, double $\ast$b, double $\ast$c)
+\begin{DoxyCompactList}\small\item\em Takes input from user. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{snus_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{4k__mg_8cpp_a98fed8725d0e188dde87f39168836ad2}{solve\+\_\+equation}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em Chooses a method of solution. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{snus_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{4k__mg_8cpp_aaea2d0f9b4155a87659c7a2fcc6f8ea7}{solve\+\_\+linear\+\_\+case}} (double b, double c, double $\ast$x1)
+\begin{DoxyCompactList}\small\item\em Solves a linear equation. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{snus_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} \mbox{\hyperlink{4k__mg_8cpp_a72c9b1fd8efbda71659c7e47ce992fe8}{solve\+\_\+square\+\_\+case}} (double a, double b, double c, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em Solves a quadratic equation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{4k__mg_8cpp_a7fb618b9f5ac5f07be66734e0a74bc31}{output}} (enum \mbox{\hyperlink{snus_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} root\+\_\+am, double $\ast$x1, double $\ast$x2)
+\begin{DoxyCompactList}\small\item\em Creates output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{4k__mg_8cpp_a8e55f3e436b0268b26875038536f8e53}{unit\+\_\+test}} ()
+\begin{DoxyCompactList}\small\item\em Tests correctness of work of key functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all functions\textquotesingle{} bodies. 
+
+A .cpp file that contains bodies of all functions declared in \char`\"{}snus.\+h\char`\"{} 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{4k__mg_8cpp_a02cbc2defee0f3d84ee8067d45732176}\label{4k__mg_8cpp_a02cbc2defee0f3d84ee8067d45732176}} 
+\index{4k\_mg.cpp@{4k\_mg.cpp}!comp\_doubles@{comp\_doubles}}
+\index{comp\_doubles@{comp\_doubles}!4k\_mg.cpp@{4k\_mg.cpp}}
+\doxysubsubsection{\texorpdfstring{comp\_doubles()}{comp\_doubles()}}
+{\footnotesize\ttfamily bool comp\+\_\+doubles (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})}
+
+
+
+Compares two double variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b} & -\/ two numbers for comparison \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if $\vert$a -\/ b$\vert$ is less then EPS 
+
+false -\/ if $\vert$a -\/ b$\vert$ is more then EPS
+\end{DoxyReturn}
+This function is used to compare two double type variables with a precision of EPS 
+
+Definition at line 12 of file 4k\+\_\+mg.\+cpp.
+
+\mbox{\Hypertarget{4k__mg_8cpp_a13d2c2714fbba2c6e3ed23f468305658}\label{4k__mg_8cpp_a13d2c2714fbba2c6e3ed23f468305658}} 
+\index{4k\_mg.cpp@{4k\_mg.cpp}!input@{input}}
+\index{input@{input}!4k\_mg.cpp@{4k\_mg.cpp}}
+\doxysubsubsection{\texorpdfstring{input()}{input()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{snus_8h_ae6e91702a8449c6fd46015ad5f51d845}{err\+\_\+input}} input (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b,  }\item[{double $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Takes input from user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ pointers to variables that will contain coefficients of\textbackslash{} an equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0\\
+\hline
+\end{DoxyParams}
+This function is used to take input of coefficients of an equation. 
+
+Definition at line 12 of file 4k\+\_\+mg.\+cpp.
+
+\mbox{\Hypertarget{4k__mg_8cpp_a7fb618b9f5ac5f07be66734e0a74bc31}\label{4k__mg_8cpp_a7fb618b9f5ac5f07be66734e0a74bc31}} 
+\index{4k\_mg.cpp@{4k\_mg.cpp}!output@{output}}
+\index{output@{output}!4k\_mg.cpp@{4k\_mg.cpp}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily void output (\begin{DoxyParamCaption}\item[{enum \mbox{\hyperlink{snus_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}}}]{root\+\_\+am,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Creates output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root\+\_\+am} & -\/ a roots\+\_\+amount that specifies an amount of roots \\
+\hline
+{\em x1,x2} & pointers to roots that have been found\\
+\hline
+\end{DoxyParams}
+This function is used to generate output based on amount of roots (specified by root\+\_\+am) and to print them 
+
+Definition at line 90 of file 4k\+\_\+mg.\+cpp.
+
+\mbox{\Hypertarget{4k__mg_8cpp_a98fed8725d0e188dde87f39168836ad2}\label{4k__mg_8cpp_a98fed8725d0e188dde87f39168836ad2}} 
+\index{4k\_mg.cpp@{4k\_mg.cpp}!solve\_equation@{solve\_equation}}
+\index{solve\_equation@{solve\_equation}!4k\_mg.cpp@{4k\_mg.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_equation()}{solve\_equation()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{snus_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+equation (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Chooses a method of solution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ coefficients of a quadratic equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0 \\
+\hline
+{\em x1,x2} & -\/ pointers to variables that will contain found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found
+\end{DoxyReturn}
+This function is used to choose a calculation method depending on \char`\"{}a\char`\"{} parameter. If \char`\"{}a\char`\"{} is equal to 0 than equation is linear and solvelin function is used In other cases a solvesq function is used 
+
+Definition at line 12 of file 4k\+\_\+mg.\+cpp.
+
+\mbox{\Hypertarget{4k__mg_8cpp_aaea2d0f9b4155a87659c7a2fcc6f8ea7}\label{4k__mg_8cpp_aaea2d0f9b4155a87659c7a2fcc6f8ea7}} 
+\index{4k\_mg.cpp@{4k\_mg.cpp}!solve\_linear\_case@{solve\_linear\_case}}
+\index{solve\_linear\_case@{solve\_linear\_case}!4k\_mg.cpp@{4k\_mg.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_linear\_case()}{solve\_linear\_case()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{snus_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+linear\+\_\+case (\begin{DoxyParamCaption}\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1 }\end{DoxyParamCaption})}
+
+
+
+Solves a linear equation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b,c} & -\/ coefficients of a linear function of type\+: b $\ast$ x + c = 0 \\
+\hline
+{\em x1} & -\/ pointer to a variable that will contain a found root \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found
+\end{DoxyReturn}
+This function is used to find all real roots of a linear equation and specify the amount of roots found 
+
+Definition at line 12 of file 4k\+\_\+mg.\+cpp.
+
+\mbox{\Hypertarget{4k__mg_8cpp_a72c9b1fd8efbda71659c7e47ce992fe8}\label{4k__mg_8cpp_a72c9b1fd8efbda71659c7e47ce992fe8}} 
+\index{4k\_mg.cpp@{4k\_mg.cpp}!solve\_square\_case@{solve\_square\_case}}
+\index{solve\_square\_case@{solve\_square\_case}!4k\_mg.cpp@{4k\_mg.cpp}}
+\doxysubsubsection{\texorpdfstring{solve\_square\_case()}{solve\_square\_case()}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{snus_8h_a46d3fddc9acc9207ec5f4dd340f5b955}{roots\+\_\+amount}} solve\+\_\+square\+\_\+case (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{double}]{c,  }\item[{double $\ast$}]{x1,  }\item[{double $\ast$}]{x2 }\end{DoxyParamCaption})}
+
+
+
+Solves a quadratic equation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a,b,c} & -\/ coefficients of a quadratic equation of type\+: a $\ast$ x$^\wedge$2 + b $\ast$ x + c = 0 \\
+\hline
+{\em x1,x2} & -\/ pointers to variables that will contain found roots \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+roots\+\_\+amount type constant that specifies amount of roots found 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em This} & function does not operate with \char`\"{}a\char`\"{} equal to zero \\
+\hline
+{\em (this} & issue is solved in solve\+\_\+equation function)\\
+\hline
+\end{DoxyExceptions}
+This function is used to find all real roots of a quadratic equation and specify the amount of roots found 
+
+Definition at line 12 of file 4k\+\_\+mg.\+cpp.
+
+\mbox{\Hypertarget{4k__mg_8cpp_a8e55f3e436b0268b26875038536f8e53}\label{4k__mg_8cpp_a8e55f3e436b0268b26875038536f8e53}} 
+\index{4k\_mg.cpp@{4k\_mg.cpp}!unit\_test@{unit\_test}}
+\index{unit\_test@{unit\_test}!4k\_mg.cpp@{4k\_mg.cpp}}
+\doxysubsubsection{\texorpdfstring{unit\_test()}{unit\_test()}}
+{\footnotesize\ttfamily void unit\+\_\+test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tests correctness of work of key functions. 
+
+This function is used to detect mistakes in functions solve\+\_\+equation, solve\+\_\+linear\+\_\+case, solve\+\_\+square\+\_\+case and comp\+\_\+doubles 
+
+Definition at line 122 of file 4k\+\_\+mg.\+cpp.
+
