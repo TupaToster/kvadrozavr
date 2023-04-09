@@ -39,7 +39,7 @@ enum input_type input (double* const a, double* const b, double* const c) {
 		}
 
 		char terminator = '\0';
-		sscanf(in, "%c", terminator);
+		sscanf(in, "%c", &terminator);
 
 		if (terminator == 'q' || terminator == 'Q') return STOP_COMMAND;
 
