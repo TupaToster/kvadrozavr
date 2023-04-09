@@ -12,6 +12,9 @@ bool comp_doubles (const double a, const double b) {
     return fabs (a-b) < EPS;
 }
 
+//---------------------------------------------------------------------------------
+
+// bug somewhere here!!!!!!!!!!!
 enum input_type input (double* const a, double* const b, double* const c) {
 
     for(;;) {
@@ -36,7 +39,7 @@ enum input_type input (double* const a, double* const b, double* const c) {
 		}
 
 		char terminator = '\0';
-		sscanf(in, "%c", &terminator);
+		sscanf(in, "%c", terminator);
 
 		if (terminator == 'q' || terminator == 'Q') return STOP_COMMAND;
 
@@ -49,6 +52,8 @@ enum input_type input (double* const a, double* const b, double* const c) {
     }
     return OK;
 }
+
+//---------------------------------------------------------------------------------
 
 enum roots_amount solve_equation (const double a, const double b, const double c,
 								  double* const x1, double* const x2) {

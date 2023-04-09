@@ -1,6 +1,3 @@
-//da blya za chto
-
-
 /*!
     \file
     \brief A header with all funcs prototypes and constants
