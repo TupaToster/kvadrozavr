@@ -1,23 +1,23 @@
 /*!
 	\mainpage
-	
-	This project uses extensive mathematic knowledge and advanced programming 
+
+	This project uses extensive mathematic knowledge and advanced programming
 	techniques to solve the world's biggest problem of all time: helping seven's grade students to solve
 	linear and quadratic equations.
-	
+
 	This project may look extremely complex, but it actually is.
 	So, to help our fellow 7 graders understand all depths of
-	programming, linear algebra and quantum mechanics this 
+	programming, linear algebra and quantum mechanics this
 	documentation was created.
-	
+
 */
 
 
 /*!
 	\file
 	\brief A main file
-	
-	A main.cpp file that contains body of a main function and variables 
+
+	A main.cpp file that contains body of a main function and variables
 	needed for solving the equation
 */
 
@@ -40,7 +40,7 @@ int main (int argc, char* argv[]) {
         return 0;
     }
 
-	printf("To terminate the program type in 'q' or 'Q' instead of the first coeffitient of the equation \n"); 
+	printf("To terminate the program type in 'q' or 'Q' instead of the first coeffitient of the equation \n");
 
     for(;;){
     	double a  = 0,
@@ -48,7 +48,7 @@ int main (int argc, char* argv[]) {
                c  = 0,
                x1 = 0,
                x2 = 0;
-		
+
 		if(input (&a, &b, &c) == STOP_COMMAND) return 0;
 
 	    output (solve_equation (a, b, c, &x1, &x2), &x1, &x2);

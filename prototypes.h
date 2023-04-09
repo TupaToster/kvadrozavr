@@ -9,8 +9,8 @@
 */
 
 #include <stdio.h>
-#include <TXlib.h>
-#include <windows.h>
+#include <string.h>
+#include <assert.h>
 #include <math.h>
 
 /*!
@@ -28,7 +28,7 @@
 /*!
     \brief Asserts the condition but does not abort whole program
 	\param cnd - an expression with a bool return type
-	
+
 	This function is used to let user now if a bool type expression
 	has a different value than expected
 */
@@ -42,17 +42,17 @@
 
 /*!
     \brief Constants that specify amounts of roots
-	\var  case with infinite roots	
-	\var ZERO_ROOTS - case with zero roots   
-	\var ONE_ROOTS - case with one root(s)   
-	\var TWO _ROOTS - case with two roots    
-	
+	\var  case with infinite roots
+	\var ZERO_ROOTS - case with zero roots
+	\var ONE_ROOTS - case with one root(s)
+	\var TWO _ROOTS - case with two roots
+
 	This set of constants is used to tell the output function how many roots it has to print.
 	Also used in solve_equation, solve_square_case and solve_linear_case as a return value
 	with the same purposes.
 */
 enum roots_amount {
-	INF_ROOTS  = -1, ///< Indicates that infinite roots exist 
+	INF_ROOTS  = -1, ///< Indicates that infinite roots exist
 	ZERO_ROOTS = 0,  ///< Indicates that zero roots exist
 	ONE_ROOTS  = 1,  ///< Indicates that one root exists
 	TWO_ROOTS  = 2   ///< Indicates that two roots exist
@@ -97,7 +97,7 @@ enum roots_amount solve_equation (double a, double b, double c, double* x1, doub
     \param a, b, c - coefficients of a quadratic equation of type: a * x^2 + b * x + c = 0
     \param x1, x2  - pointers to variables that will contain found roots
     \return roots_amount type constant that specifies amount of roots found
-    \exception This function does not operate with "a" equal to zero 
+    \exception This function does not operate with "a" equal to zero
 	\exception (this issue is solved in solve_equation function)
 
     This function is used to find all real roots of a quadratic equation
@@ -139,7 +139,7 @@ void output (enum roots_amount root_am, double* x1, double* x2);
 /*!
     \brief Tests correctness of work of key functions
 
-    This function is used to detect mistakes in functions solve_equation, 
+    This function is used to detect mistakes in functions solve_equation,
 	solve_linear_case, solve_square_case and comp_doubles
 */
 void unit_test ();
